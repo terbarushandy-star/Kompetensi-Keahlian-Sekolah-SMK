@@ -92,7 +92,7 @@
 
     {{-- 3. FOOTER --}}
     @include('components.footer')
-
+p
     {{-- 4. FLOATING BACK TO TOP BUTTON --}}
     <button @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
             x-show="showBackToTop"
