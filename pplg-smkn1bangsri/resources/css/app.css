@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Prevent Alpine.js element flickering on load */
+[x-cloak] {
+  display: none !important;
+}
+
+/* ==========================
+   Tailwind v4 Design System Tokens
+========================== */
+@theme {
+  --font-sans: 'Poppins', sans-serif;
+
+  /* Standard Brand Color Tokens (Orange) */
+  --color-brand-50: #FFF7ED;
+  --color-brand-100: #FFEDD5;
+  --color-brand-500: #F97316;
+  --color-brand-600: #EA580C;
+  --color-brand-700: #C2410C;
+
+  /* Dark Surface Tokens (Hero Overlay, Footer, Dark Section) */
+  --color-surface-dark: #0F172A;
+
+  /* Semantic Color Tokens */
+  --color-semantic-success: #16A34A; /* Badge Juara / Status */
+}
+
+/* ==========================
+   Base
+========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  overflow-x: hidden;
+}
+
+/* Custom Keyframes for Animations */
+@keyframes heroProgress {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* ==========================
+   Container & Section Utilities
+========================== */
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+}
+
+.section {
+  @apply py-16 sm:py-24;
+}
+
+/* ==========================
+   Heading & Typography
+========================== */
+
+.section-title {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900;
+}
+
+.section-subtitle {
+  @apply mt-3 sm:mt-4 text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed;
+}
+
+/* ==========================
+   Button & Accessibility (A11y)
+========================== */
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-orange-600 text-white font-bold transition duration-300 hover:bg-orange-700 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 shadow-md shadow-orange-600/20;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-6 py-3.5 rounded-full border-2 border-orange-600 text-orange-600 font-bold transition duration-300 hover:bg-orange-600 hover:text-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500;
+}
