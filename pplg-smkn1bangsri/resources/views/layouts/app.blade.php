@@ -89,7 +89,7 @@
     <main class="grow">
         @yield('content')
     </main>
-<p></p>
+
     {{-- 3. FOOTER --}}
     @include('components.footer')
 
